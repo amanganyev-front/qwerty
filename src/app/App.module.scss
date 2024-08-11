@@ -1,8 +1,16 @@
+@import "@/app/styles/variables.scss";
+
 .app {
-    width: 100vw;
-    padding: 150px;
-    height: 100vh;
+    padding: 200px;
+}
+
+.inner {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    gap: 10px;
+    height: 180px;
+    overflow: hidden;
+    outline: none;
+    border: none;
 }

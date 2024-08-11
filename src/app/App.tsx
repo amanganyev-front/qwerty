@@ -1,20 +1,26 @@
-import { FC } from "react";
+import { FC, KeyboardEvent } from "react";
 import { Word } from "./ui";
 import styles from "./App.module.scss";
 import { textArray } from "./variables";
 
 export const App: FC = () => {
-    const divided = textArray.split(" ");
-    console.log(divided, "divided");
-
+    const handleKeyDown = (e: KeyboardEvent) => {
+        console.log(e.key);
+    };
     return (
-        <div className={styles.app}>
-            {divided.map((word, i) => (
-                <Word
-                    text={word}
-                    key={i}
-                />
-            ))}
-        </div>
+        <main className={styles.app}>
+            <div
+                className={styles.inner}
+                onKeyDown={handleKeyDown}
+                tabIndex={0}
+            >
+                {textArray.map((word, i) => (
+                    <Word
+                        text={word}
+                        key={i}
+                    />
+                ))}
+            </div>
+        </main>
     );
 };
