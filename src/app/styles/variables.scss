@@ -1,4 +1,9 @@
-$background: #eff2f7;
+$background: #323437;
+$yellow: #e2b714;
+$white: #d1d0c5;
+$gray: #636568;
+$brightred: #c54653;
+$darkred: #7e2a33;
 
 @mixin tablet {
     @media screen and (max-width: 1260px) {
